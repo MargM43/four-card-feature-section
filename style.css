@@ -3,72 +3,64 @@
     box-sizing: border-box;
 }
 
+
 :root {
-    --ff-main: "Poppins", sans-serif;
+--fw-2: 600;
+--fw-3: 800;
 
-    --fw-1: 400;
-    --fw-2: 600;
-    --fw-3: 800;
-
-  --fluid-16-48: clamp(1rem, 0.4737rem + 2.807vw, 3rem);
-   --step-0: clamp(1rem, 0.6711rem + 1.7544vw, 2.25rem);
-     --step--1: clamp(0.8333rem, 0.7368rem + 0.5146vw, 1.2rem);
-      --space-s: clamp(1rem, 0.8684rem + 0.7018vw, 1.5rem);
-  --space-m: clamp(1.5rem, 1.3026rem + 1.0526vw, 2.25rem);
-  --space-l: clamp(2rem, 1.7368rem + 1.4035vw, 3rem);
-
-  --clr-Red: hsl(0, 78%, 62%);
+--clr-Red: hsl(0, 78%, 62%);
 --clr-Cyan: hsl(180, 62%, 55%);
 --clr-Orange: hsl(34, 97%, 64%);
 --clr-Blue: hsl(212, 86%, 64%);
 
+--clr-Grey-500: hsl(234, 12%, 34%);
+--clr-Grey-400: hsl(212, 6%, 44%);
+--clr-White: hsl(0, 0%, 100%);
 
+--fluid-16-48: clamp(1rem, 0.4737rem + 2.807vw, 3rem);
+--fluid-14-20: clamp(0.875rem, 0.7216rem + 0.6818vw, 1.25rem);
+--fluid-18-40: clamp(1.125rem, 0.6667rem + 2.037vw, 2.5rem);
+--fluid-14-48: clamp(0.875rem, 0.1667rem + 3.1481vw, 3rem);
+
+
+--clr-attrib: hsl(228, 45%, 44%);
 
 }
 
 body {
-    font-family: Poppins, sans-serif;
-    font-size: var(--step--1);
-    font-weight: var(--fw-1);
+    background-color: var(--clr-White);
+    block-size: 100svb;
+    font-family: var(--ff-main);
+    font-size: var(--fluid-14-24);
     letter-spacing: .1rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: var(--fluid-14-20);
 }
 
 h1 {
-    font-size: var(--fluid-16-48);
-    font-weight: var(--fw-1);
-    opacity: .4;
-    line-height: 1.1;
-
+    font-size: var(--fluid-18-40);
+    color: var(--clr-Grey-400);
+    font-weight: 400;
 }
 
 h2 {
-    font-size: var(--fluid-16-48);
-    font-weight: var(--fw-3);
-    font-weight: var(--fw-3);
-    letter-spacing: .2rem;
-    line-height: 1.1;
+    font-size: var(--fluid-18-40);
 }
 
-.container {
-    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: 
-    ". hero hero hero hero ."
-    ". card__1 card__1 ."
-    ". card__2 card__2 card__3 card__3 ."
-    ". card__4 card__4 card__4 card__4 .";
-   ;
-
+main {
+    padding-block: 5rem;
+    padding-inline: 2rem;
+    @media (width <= 1000px) {
+        padding-block: 2rem;
+        padding-inline: 1rem;
+        margin-inline: -1rem;
+    }
 }
 
-/* main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-} */
+
 
 /* .hero {
     
