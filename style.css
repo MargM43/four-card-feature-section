@@ -60,7 +60,20 @@ main {
     }
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+}
 
+.card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-bottom: 10px solid var(--clr-Grey-400);
+    padding-block: 2rem;
+}
 
 /* .hero {
     
